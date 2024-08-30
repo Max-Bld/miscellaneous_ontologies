@@ -1,0 +1,158 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <https://schema.org/> .
+
+<https://odta.io/voc/Trail>
+  a rdfs:Class ;
+  rdfs:comment "A path, track or unpaved lane or road for sport activities or walking."@en ;
+  rdfs:label "Trail"@en ;
+  rdfs:subClassOf <https://schema.org/Place> .
+
+<https://odta.io/voc/TrailDifficultySpecification>
+  a rdfs:Class ;
+  rdfs:comment "A structured value providing infomation about the difficulty of a trail."@en ;
+  rdfs:label "TrailDifficultySpecification"@en ;
+  rdfs:subClassOf <https://schema.org/StructuredValue> .
+
+<https://odta.io/voc/TrailEnumeration>
+  a rdfs:Class ;
+  rdfs:comment "An enumeration type whose instances are potential trail types."@en ;
+  rdfs:label "TrailEnumeration"@en ;
+  rdfs:subClassOf <https://schema.org/Enumeration> .
+
+<https://odta.io/voc/SACScale>
+  a rdfs:Class ;
+  rdfs:comment "A trail difficulty scale between 1 and 6. Grade 1 is the easiest, Grade 6 is the hardest. https://de.wikipedia.org/wiki/SAC-Wanderskala"@en ;
+  rdfs:label "SACScale"@en ;
+  rdfs:subClassOf <https://schema.org/Enumeration> .
+
+<https://odta.io/voc/startLocation>
+  a rdf:Property ;
+  rdfs:comment "A sub property of schema.org location. The start location of the trail."@en ;
+  rdfs:label "startLocation"@en ;
+  rdfs:subPropertyOf <https://schema.org/location> ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Place .
+
+<https://odta.io/voc/endLocation>
+  a rdf:Property ;
+  rdfs:comment "A sub property of schema.org location. The end location of the trail."@en ;
+  rdfs:label "endLocation"@en ;
+  rdfs:subPropertyOf ns0:location ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Place .
+
+<https://odta.io/voc/wayPoint>
+  a rdf:Property ;
+  rdfs:comment "A waypoint is an intermediate point or place or stopping point on a trail or line of travel."@en ;
+  rdfs:label "wayPoint"@en ;
+  rdfs:subPropertyOf ns0:containsPlace ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Place, ns0:ItemList .
+
+<https://odta.io/voc/typeOfTrail>
+  a rdf:Property ;
+  rdfs:comment "The kind of a trail."@en ;
+  rdfs:label "typeOfTrail"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Text .
+
+<https://odta.io/voc/length>
+  a rdf:Property ;
+  rdfs:comment "The length of the trail"@en ;
+  rdfs:label "length"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:QuantitativeValue .
+
+<https://odta.io/voc/estimatedDuration>
+  a rdf:Property ;
+  rdfs:comment "The estimated duration to complete the trail."@en ;
+  rdfs:label "duration"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Duration .
+
+<https://odta.io/voc/highestPoint>
+  a rdf:Property ;
+  rdfs:comment "The altitude of the highest point of a trail"@en ;
+  rdfs:label "highestPoint"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:QuantitativeValue .
+
+<https://odta.io/voc/lowestPoint>
+  a rdf:Property ;
+  rdfs:comment "The altitude of the lowest point of a trail"@en ;
+  rdfs:label "lowestPoint"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:QuantitativeValue .
+
+<https://odta.io/voc/uphillElevation>
+  a rdf:Property ;
+  rdfs:comment "The elevation gain when going uphill on a trail"@en ;
+  rdfs:label "uphillElevation"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:QuantitativeValue .
+
+<https://odta.io/voc/downhillElevation>
+  a rdf:Property ;
+  rdfs:comment "The vertical elevation loss when going downhill on a trail"@en ;
+  rdfs:label "downhillElevation"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:QuantitativeValue .
+
+<https://odta.io/voc/difficulty>
+  a rdf:Property ;
+  rdfs:comment "Difficulty of a trail"@en ;
+  rdfs:label "difficulty"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes <https://odta.io/voc/TrailDifficultySpecification> .
+
+<https://odta.io/voc/circularTrail>
+  a rdf:Property ;
+  rdfs:comment "An indicator for whether the start and end location of the Trail is the same."@en ;
+  rdfs:label "circularTrail"@en ;
+  ns0:domainIncludes <https://odta.io/voc/Trail> ;
+  ns0:rangeIncludes ns0:Boolean .
+
+<https://odta.io/voc/grade>
+  a rdf:Property ;
+  rdfs:comment "The difficulty grade according to some scale. Currrently SAC Scale is used."@en ;
+  rdfs:label "grade"@en ;
+  ns0:domainIncludes <https://odta.io/voc/TrailDifficultySpecification> ;
+  ns0:rangeIncludes <https://odta.io/voc/SACScale> .
+
+<https://odta.io/voc/equipmentNeeded>
+  a rdf:Property ;
+  rdfs:comment "An indicator for the recommended equipment to complete the trail"@en ;
+  rdfs:label "equipmentNeeded"@en ;
+  ns0:domainIncludes <https://odta.io/voc/TrailDifficultySpecification> ;
+  ns0:rangeIncludes ns0:Text .
+
+<https://odta.io/voc/T1>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "No particular challenge. Easy orientation, can be posible done with sneakers."@en ;
+  rdfs:label "T1 - Hiking"@en .
+
+<https://odta.io/voc/T2>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "A little surefootedness required. Good trekking shoes are recommended. Basic orientation skills needed."@en ;
+  rdfs:label "T2 - Mountain hiking"@en .
+
+<https://odta.io/voc/T3>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "Good surefootedness required. Trekking shoes are recommended. Average orientation skills and familiarity with alpine environment recommended"@en ;
+  rdfs:label "T3 - Challenging mountain hiking"@en .
+
+<https://odta.io/voc/T4>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "Skills for hiking in steep terrain is required. Stable trekking shoes are recommended. Good orientation skills and familiarity with the alpine environment needed. Under bad weather conditions can be particularly challenging."@en ;
+  rdfs:label "T4 - Alpine hiking"@en .
+
+<https://odta.io/voc/T5>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "Mountaineering boots are recommended. Good terrain judgement skills and very good orientation skills are needed. High experience in high alpine terrain is required. Experience with ice axe and ropes are recommended."@en ;
+  rdfs:label "T5 - Challenging alpine hiking"@en .
+
+<https://odta.io/voc/T6>
+  a <https://odta.io/voc/SACScale> ;
+  rdfs:comment "Excellent orientation skills are required. High experience in alpine environment and certain alpine equipment is recommended"@en ;
+  rdfs:label "T6 - Difficult alpine hiking"@en .

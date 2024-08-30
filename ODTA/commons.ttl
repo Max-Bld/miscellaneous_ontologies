@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://odta.io/voc/status>
+  a rdf:Property ;
+  schema:domainIncludes schema:Place ;
+  schema:rangeIncludes <https://odta.io/voc/OpeningStatus> ;
+  rdfs:comment "Open status of the place."@en ;
+  rdfs:label "status"@en .
+
+<https://odta.io/voc/Closed>
+  a <https://odta.io/voc/OpeningStatus> ;
+  rdfs:comment "Signalizes that the given element is closed."@en ;
+  rdfs:label "Closed"@en .
+
+<https://odta.io/voc/NoInformation>
+  a <https://odta.io/voc/OpeningStatus> ;
+  rdfs:comment "There are no information on the opening status of the given element."@en ;
+  rdfs:label "NoInformation"@en .
+
+<https://odta.io/voc/Open>
+  a <https://odta.io/voc/OpeningStatus> ;
+  rdfs:comment "The given element is open."@en ;
+  rdfs:label "Open"@en .
+
+<https://odta.io/voc/WeekendOnly>
+  a <https://odta.io/voc/OpeningStatus> ;
+  rdfs:comment "The given element opens on the weekend only."@en ;
+  rdfs:label "WeekendOnly"@en .
