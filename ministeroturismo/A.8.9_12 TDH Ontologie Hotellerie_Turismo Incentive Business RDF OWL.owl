@@ -1,0 +1,3795 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/Stefano98212/AdaBoosting---Forest-Cover-Type/main/TDH022-Ontologia.owl#"
+     xml:base="https://raw.githubusercontent.com/Stefano98212/AdaBoosting---Forest-Cover-Type/main/TDH022-Ontologia.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://localhost/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://localhost/core">
+        <owl:versionIRI rdf:resource="http://localhost/core/2.7"/>
+        <rdfs:label xml:lang="it">TDH022-Ontologia</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/core#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasAuthor">
+        <owl:inverseOf rdf:resource="http://localhost/core#isAuthorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasDestination">
+        <owl:inverseOf rdf:resource="http://localhost/core#isDestinationOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#EventProgram"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                    <rdf:Description rdf:about="http://localhost/core#StageItineraryUgc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasEvent">
+        <owl:inverseOf rdf:resource="http://localhost/core#isEventOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                    <rdf:Description rdf:about="http://localhost/core#StageItineraryUgc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasHyperlink -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasHyperlink">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Hyperlinks"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasLinkedDestination -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasLinkedDestination">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://localhost/core#Destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasLinkedParagraph -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasLinkedParagraph">
+        <owl:inverseOf rdf:resource="http://localhost/core#isLinkedParagraphOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Paragraph"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasOnlineContact -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasOnlineContact">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://localhost/core#OnlineContact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasParagraph -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasParagraph">
+        <owl:inverseOf rdf:resource="http://localhost/core#isParagraphOf"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Article"/>
+        <rdfs:range rdf:resource="http://localhost/core#Paragraph"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasPartnerRecordRestaurant -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasPartnerRecordRestaurant">
+        <owl:inverseOf rdf:resource="http://localhost/core#isPartnerRecordRestaurantOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasSource">
+        <owl:inverseOf rdf:resource="http://localhost/core#isSourceOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasSponsor -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasSponsor">
+        <owl:inverseOf rdf:resource="http://localhost/core#isSponsorOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://localhost/core#Sponsor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasStage -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasStage">
+        <owl:inverseOf rdf:resource="http://localhost/core#isStageOf"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://localhost/core#Stage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#hasStageUgc -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#hasStageUgc">
+        <owl:inverseOf rdf:resource="http://localhost/core#isStageUgcOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isAuthorOf"/>
+    
+
+
+    <!-- http://localhost/core#isDestinationOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isDestinationOf"/>
+    
+
+
+    <!-- http://localhost/core#isEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isEventOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#isLinkedParagraphOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isLinkedParagraphOf"/>
+    
+
+
+    <!-- http://localhost/core#isParagraphOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isParagraphOf"/>
+    
+
+
+    <!-- http://localhost/core#isPartnerRecordRestaurantOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isPartnerRecordRestaurantOf"/>
+    
+
+
+    <!-- http://localhost/core#isSourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isSourceOf"/>
+    
+
+
+    <!-- http://localhost/core#isSponsorOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isSponsorOf"/>
+    
+
+
+    <!-- http://localhost/core#isStageOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isStageOf"/>
+    
+
+
+    <!-- http://localhost/core#isStageUgcOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isStageUgcOf">
+        <rdfs:domain rdf:resource="http://localhost/core#StageItineraryUgc"/>
+        <rdfs:range rdf:resource="http://localhost/core#ItineraryUgc"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#isSubEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isSubEventOf">
+        <owl:inverseOf rdf:resource="http://localhost/core#isSuperEventOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#isSuperEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#isSuperEventOf">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://localhost/core#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/core#referencedToItinerary -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/core#referencedToItinerary">
+        <rdfs:domain rdf:resource="http://localhost/core#ItineraryUgc"/>
+        <rdfs:range rdf:resource="http://localhost/core#Itinerary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/core#additionalManualTags -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#additionalManualTags">
+        <rdfs:domain rdf:resource="http://localhost/core#Article"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Paragraph"/>
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta i tags che vengono aggiunti ai contenuti in maniera manuale.</rdfs:comment>
+        <rdfs:label xml:lang="en">additional manual tags</rdfs:label>
+        <rdfs:label xml:lang="it">tags aggiunti manualmente</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#addressArea -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#addressArea">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresentà il nome di un&apos;area geograficao di una località.</rdfs:comment>
+        <rdfs:label xml:lang="en">address area</rdfs:label>
+        <rdfs:label xml:lang="it">area dell&apos;indirizzo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#aemTags -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#aemTags">
+        <rdfs:domain rdf:resource="http://localhost/core#Article"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Paragraph"/>
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la lista di tags forniti da tassonomia.</rdfs:comment>
+        <rdfs:label xml:lang="en">aem tags</rdfs:label>
+        <rdfs:label xml:lang="it">aem tags</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#agent -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#agent">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;organizzatore dell&apos;evento.</rdfs:comment>
+        <rdfs:label xml:lang="en">agent</rdfs:label>
+        <rdfs:label xml:lang="it">agente</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#aiChosenTags -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#aiChosenTags">
+        <rdfs:domain rdf:resource="http://localhost/core#Article"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:domain rdf:resource="http://localhost/core#Paragraph"/>
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta i tags individuati dall&apos;intelligenza artificiale.</rdfs:comment>
+        <rdfs:label xml:lang="en">ai chosen tags</rdfs:label>
+        <rdfs:label xml:lang="it">tags individuati dall&apos;intelligenza artificiale</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#altitude -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#altitude">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;altitudine della destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+        <rdfs:label xml:lang="it">altitudine</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#ambienceType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#ambienceType">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la tipologia dell&apos;ambientazione del ristorante offerto dal partner.</rdfs:comment>
+        <rdfs:label xml:lang="en">ambience type</rdfs:label>
+        <rdfs:label xml:lang="it">tipologia ambientazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#authorImage -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#authorImage">
+        <rdfs:domain rdf:resource="http://localhost/core#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;immagine dell&apos;autore (URL dell&apos;immagine).</rdfs:comment>
+        <rdfs:label xml:lang="en">author image</rdfs:label>
+        <rdfs:label xml:lang="it">immagine dell&apos;autore</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#bestPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#bestPeriod">
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il miglior periodo per svolgere l&apos;itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="en">best period</rdfs:label>
+        <rdfs:label xml:lang="it">miglior periodo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#bestPeriodFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#bestPeriodFrom">
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta a partire da quando è il miglior periodo per svolgere l&apos;itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="en">best period from</rdfs:label>
+        <rdfs:label xml:lang="it">miglior periodo da</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#bestPeriodTo -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#bestPeriodTo">
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta fino a quando è il miglior periodo per svolgere l&apos;itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="en">best period to</rdfs:label>
+        <rdfs:label xml:lang="it">miglior periodo fino a</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#bookable -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#bookable">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa properità indica se il ristorante permette la prenotaione tramite widget.</rdfs:comment>
+        <rdfs:label xml:lang="en">bookable</rdfs:label>
+        <rdfs:label xml:lang="it">prenotabile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#category -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#category">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la categoria della destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">categoria</rdfs:label>
+        <rdfs:label xml:lang="en">category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#city -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#city">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la città.</rdfs:comment>
+        <rdfs:label xml:lang="it">città</rdfs:label>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#coordinatesReferencedSystem -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#coordinatesReferencedSystem">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sistema di coordinate di riferimento es. (WGS84)</rdfs:comment>
+        <rdfs:label xml:lang="en">coordinates referenced system</rdfs:label>
+        <rdfs:label xml:lang="it">sistema delle coordinate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#country -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#country">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta lo stato della destinazione es. (Italia)</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+        <rdfs:label xml:lang="it">stato</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#creationDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#ItineraryUgc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di creazione di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">creation date</rdfs:label>
+        <rdfs:label xml:lang="it">data di creazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#description -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Author"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Hyperlinks"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                    <rdf:Description rdf:about="http://localhost/core#Source"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#destinationType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#destinationType">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa classse rappresenta il tipo di destinazione (es. ristorante, hotel)</rdfs:comment>
+        <rdfs:label xml:lang="en">destination type</rdfs:label>
+        <rdfs:label xml:lang="it">tipo di destinazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#difficulty -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#difficulty">
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la difficoltà di un itinerario espressa attraverso una lista predefinita.</rdfs:comment>
+        <rdfs:label xml:lang="it">difficoltà</rdfs:label>
+        <rdfs:label xml:lang="en">difficulty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#distinction -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#distinction">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la distinzione di un ristorante es. (1 stella, 2 stelle ecc).</rdfs:comment>
+        <rdfs:label xml:lang="en">distinction</rdfs:label>
+        <rdfs:label xml:lang="it">distinzione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#district -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#district">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il municipio o il quartiere del comune.</rdfs:comment>
+        <rdfs:label xml:lang="it">distretto</rdfs:label>
+        <rdfs:label xml:lang="en">district</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#documentsPDF -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#documentsPDF">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;elenco degli URL dei PDF di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">documenti PDF</rdfs:label>
+        <rdfs:label xml:lang="en">documents PDF</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#duration">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la durata dell&apos;evento.</rdfs:comment>
+        <rdfs:label xml:lang="it">durata</rdfs:label>
+        <rdfs:label xml:lang="en">duration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#durationHours -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#durationHours">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la durata di un itinerario o di una tappa di un itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="it">durata in ore</rdfs:label>
+        <rdfs:label xml:lang="en">durations hours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#emailPec -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#emailPec">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;email PEC di una destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">email pec</rdfs:label>
+        <rdfs:label xml:lang="it">email pec</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#endDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#endDateTime">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">Questa proprietà rappresenta la data della fine di un evento.</rdfs:label>
+        <rdfs:label xml:lang="it">data fine evento</rdfs:label>
+        <rdfs:label xml:lang="en">end date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#externalUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#externalUrl">
+        <rdfs:domain rdf:resource="http://localhost/core#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta gli url della risorsa.</rdfs:comment>
+        <rdfs:label xml:lang="en">external url</rdfs:label>
+        <rdfs:label xml:lang="it">url esterni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#externalVideos -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#externalVideos">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;elenco url dei video che appartengono a siti esterni.</rdfs:comment>
+        <rdfs:label xml:lang="en">external videos</rdfs:label>
+        <rdfs:label xml:lang="it">video esterni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#faxNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#faxNumber">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">questa proprietà rappresenta il numero di fax.</rdfs:comment>
+        <rdfs:label xml:lang="en">fax number</rdfs:label>
+        <rdfs:label xml:lang="it">numero fax</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#fileAudio -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#fileAudio">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;elenco degli url dell&apos;audio di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">audio</rdfs:label>
+        <rdfs:label xml:lang="en">file audio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#firstPublicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#firstPublicationDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la data di prima pubblicazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di prima pubblicazione</rdfs:label>
+        <rdfs:label xml:lang="en">first publication date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#fullAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#fullAddress">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="it">Quetsa proprietà rappresenta l&apos;indirizzo completo di una destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">full address</rdfs:label>
+        <rdfs:label xml:lang="it">indirizzo completo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#geographicalDistribution -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#geographicalDistribution">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la ripartizooe georgrafica che assume la destinazione all&apos;interno del territorio italiano.</rdfs:comment>
+        <rdfs:label xml:lang="it">distribuzione geografica</rdfs:label>
+        <rdfs:label xml:lang="en">geographical distribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#geometryType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#geometryType">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la tipologia di geometria della destinazione es.(linea, poligono, punto, riquadro).</rdfs:comment>
+        <rdfs:label xml:lang="en">geometry type</rdfs:label>
+        <rdfs:label xml:lang="it">tipo di geometria</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#gifs -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#gifs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa prorpietà rappresenta l&apos;elenco degli url delle gifs di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">gifs</rdfs:label>
+        <rdfs:label xml:lang="it">gifs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#googleDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#googleDescription">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la descrizione che deriva da Google.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrizione google</rdfs:label>
+        <rdfs:label xml:lang="en">google description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#hasGiftCard -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#hasGiftCard">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà è un campo booleano che indica la presenza di una gift card.</rdfs:comment>
+        <rdfs:label xml:lang="it">carta regalo</rdfs:label>
+        <rdfs:label xml:lang="en">has gift card</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#hasPayment -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#hasPayment">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se la prenotazione richeide una carta come garanzia per il pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#hasStock -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#hasStock">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se il ristorante sarà disponibile nei prosssimi 30 giorni.</rdfs:comment>
+        <rdfs:label xml:lang="en">has stock</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#hasTheForkPay -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#hasTheForkPay">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se è possibile fare il pagamento con Yummy.</rdfs:comment>
+        <rdfs:label xml:lang="en">has the fork pay</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idAccount -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idAccount">
+        <rdfs:domain rdf:resource="http://localhost/core#ItineraryUgc"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa prorpriteà rappresenta l&apos;identificativo del creatore dell&apos;itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="en">id account</rdfs:label>
+        <rdfs:label xml:lang="it">id account</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idAdobePlace -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idAdobePlace">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo del posto fornito da adobe, necessario per trasferire le informazioni da aem a adobe places.</rdfs:comment>
+        <rdfs:label xml:lang="en">id adobe place</rdfs:label>
+        <rdfs:label xml:lang="it">id posto adobe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idEsri -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idEsri">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una lista di identificativi Esri.</rdfs:comment>
+        <rdfs:label xml:lang="en">id esri</rdfs:label>
+        <rdfs:label xml:lang="it">id esri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idIngestedContent -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idIngestedContent">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Author"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#EventProgram"/>
+                    <rdf:Description rdf:about="http://localhost/core#Hyperlinks"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                    <rdf:Description rdf:about="http://localhost/core#Source"/>
+                    <rdf:Description rdf:about="http://localhost/core#Sponsor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;dentificativo nel database del partner che fornisce il contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">id contenuto ingestato</rdfs:label>
+        <rdfs:label xml:lang="en">id ingested content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idMerchant -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idMerchant">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo del contenuto fornito dal partner.</rdfs:comment>
+        <rdfs:label xml:lang="en">id merchant</rdfs:label>
+        <rdfs:label xml:lang="it">identificativo merchant</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idTripAdvisor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idTripAdvisor">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo utilizzato su Trip Advisor.</rdfs:comment>
+        <rdfs:label xml:lang="en">id trip advisor</rdfs:label>
+        <rdfs:label xml:lang="it">id trip advisor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#idsAdobePlace -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#idsAdobePlace">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa porprietà rappresenta gli identificativi dei posti Adobe relativi agli eventi od agli itinerari.</rdfs:comment>
+        <rdfs:label xml:lang="it">id posti adobe</rdfs:label>
+        <rdfs:label xml:lang="en">ids adobe place</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#images -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#images">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#ItineraryUgc"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;url dell&apos;immagine di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">images</rdfs:label>
+        <rdfs:label xml:lang="it">immagini</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#insiderDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#insiderDescription">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">Questa proprietà rappresenta la descrizione relativa ad un ristorante insider.</rdfs:label>
+        <rdfs:label xml:lang="en">insider description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#insiderStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#insiderStatus">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se insider è attivo o no.</rdfs:comment>
+        <rdfs:label xml:lang="en">insider status</rdfs:label>
+        <rdfs:label xml:lang="it">status insider</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#insiderTip -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#insiderTip">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa prprpietà indica un suggerimento riferito al ristorante insider.</rdfs:comment>
+        <rdfs:label xml:lang="en">insider tip</rdfs:label>
+        <rdfs:label xml:lang="it">suggerimento</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#internalVideos -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#internalVideos">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta gli url dei video interni ai vari contenuti.</rdfs:comment>
+        <rdfs:label xml:lang="en">internal videos</rdfs:label>
+        <rdfs:label xml:lang="it">video interni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#isStartPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#isStartPoint">
+        <rdfs:domain rdf:resource="http://localhost/core#StageItineraryUgc"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se la tappa rappresenta il punto d&apos;inizio.</rdfs:comment>
+        <rdfs:label xml:lang="en">is start point</rdfs:label>
+        <rdfs:label xml:lang="it">è punto d&apos;inizio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#lastModificationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#lastModificationDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#ItineraryUgc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di ultima modifica di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">last modification date</rdfs:label>
+        <rdfs:label xml:lang="it">ultima data di modifica</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#lastUpdatePlaceId -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#lastUpdatePlaceId">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la data di ultima modifica o primo popolamento del campo placeId.</rdfs:comment>
+        <rdfs:label xml:lang="en">last update place id</rdfs:label>
+        <rdfs:label xml:lang="it">ultimo aggiornamento place id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#last_publication_date -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#last_publication_date">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#EventProgram"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data di ultima pubblicazione di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di ultima pubblicazione</rdfs:label>
+        <rdfs:label xml:lang="en">last publication date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#latitude">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la latitudine.</rdfs:comment>
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+        <rdfs:label xml:lang="it">latitudine</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#listOfServices -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#listOfServices">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la lista di servizi disponibili.</rdfs:comment>
+        <rdfs:label xml:lang="en">list of services</rdfs:label>
+        <rdfs:label xml:lang="it">lista servizi disponibili</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#longDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#longDescription">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una descrizione lunga di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrizione lunga</rdfs:label>
+        <rdfs:label xml:lang="en">long description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#longitude">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la longitudine.</rdfs:comment>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+        <rdfs:label xml:lang="it">longitudine</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#mainType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#mainType">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la principale categorizzazione del ristorante.</rdfs:comment>
+        <rdfs:label xml:lang="en">main type</rdfs:label>
+        <rdfs:label xml:lang="it">principale categorizzazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#mapPdf -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#mapPdf">
+        <rdfs:domain rdf:resource="http://localhost/core#Itinerary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="it">Questa proprietà rappresenta l&apos;elenco degli url dei PDF dell&apos;itinerario.</rdfs:label>
+        <rdfs:label xml:lang="en">map pdf</rdfs:label>
+        <rdfs:label xml:lang="it">mappa in pdf</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#name -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Author"/>
+                    <rdf:Description rdf:about="http://localhost/core#Hyperlinks"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                    <rdf:Description rdf:about="http://localhost/core#Source"/>
+                    <rdf:Description rdf:about="http://localhost/core#Sponsor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il nome.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:label xml:lang="it">nome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#numberOfReviews -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#numberOfReviews">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il numero di recensioni su cui si basa il rating.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of reviews</rdfs:label>
+        <rdfs:label xml:lang="it">numero di recensioni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#officialName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#officialName">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il nome ufficiale della destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">nome ufficiale</rdfs:label>
+        <rdfs:label xml:lang="en">official name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#order -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#order">
+        <rdfs:domain rdf:resource="http://localhost/core#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;ordine del pragrafo all&apos;interno dell&apos;aerticolo.</rdfs:comment>
+        <rdfs:label xml:lang="en">order</rdfs:label>
+        <rdfs:label xml:lang="it">ordine</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#otherServices -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#otherServices">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta i servizi aggiuntivi rispetto a quelli tradizionali.</rdfs:comment>
+        <rdfs:label xml:lang="en">other services</rdfs:label>
+        <rdfs:label xml:lang="it">servizi ulteriori</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#otherType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#otherType">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica un&apos;altra tipologia rispetto alla tipologia principale.</rdfs:comment>
+        <rdfs:label xml:lang="it">altra tipologia</rdfs:label>
+        <rdfs:label xml:lang="en">other type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#overTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#overTitle">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il sovra-titolo di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">over-title</rdfs:label>
+        <rdfs:label xml:lang="it">sovra-titolo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#owner -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#owner">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il proprietario di una struttura.</rdfs:comment>
+        <rdfs:label xml:lang="en">owner</rdfs:label>
+        <rdfs:label xml:lang="it">proprietario</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#partnerName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#partnerName">
+        <rdfs:domain rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il nome del partner che ci fornisce i contenuti.</rdfs:comment>
+        <rdfs:label xml:lang="it">nome del partner</rdfs:label>
+        <rdfs:label xml:lang="en">partner name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#placeId -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#placeId">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;identificativo che vine e fornito da Google.</rdfs:comment>
+        <rdfs:label xml:lang="it">id posto</rdfs:label>
+        <rdfs:label xml:lang="en">place id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#poiEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#poiEmail">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Queta proprietà rappresenta l&apos;email del punto d&apos;interesse considerato.</rdfs:comment>
+        <rdfs:label xml:lang="en">email</rdfs:label>
+        <rdfs:label xml:lang="it">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#poiOpeningHours -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#poiOpeningHours">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#OnlineContact"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;orario d&apos;apertura.</rdfs:comment>
+        <rdfs:label xml:lang="en">opening hours</rdfs:label>
+        <rdfs:label xml:lang="it">orario d&apos;apertura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#poiTelephoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#poiTelephoneNumber">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#OnlineContact"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un numero di telefono.</rdfs:comment>
+        <rdfs:label xml:lang="it">numero di telefono</rdfs:label>
+        <rdfs:label xml:lang="en">telephone number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#poiWebSiteUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#poiWebSiteUrl">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">questa proprietà rappresenta l&apos;url di un sito web.</rdfs:comment>
+        <rdfs:label xml:lang="it">url sito web</rdfs:label>
+        <rdfs:label xml:lang="en">web site url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#postalCode">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il codice di avviamento postale.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice avviamento postale</rdfs:label>
+        <rdfs:label xml:lang="en">postal code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#priceLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#priceLevel">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta l&apos;intervallo di prezzo.</rdfs:comment>
+        <rdfs:label xml:lang="it">livello di prezzo</rdfs:label>
+        <rdfs:label xml:lang="en">price level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#primaryTag -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#primaryTag">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tag principale di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">primary tag</rdfs:label>
+        <rdfs:label xml:lang="it">tag principale</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programDescription">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo della programmazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">program description</rdfs:label>
+        <rdfs:label xml:lang="it">testo programmazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programEndDate">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la data di fine programmazione visualizzata a front end.</rdfs:comment>
+        <rdfs:label xml:lang="it">data fine programmazione</rdfs:label>
+        <rdfs:label xml:lang="en">program end date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programEndingHourAm -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programEndingHourAm">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;orario di fine programmazione della mattina.</rdfs:comment>
+        <rdfs:label xml:lang="it">orario fine programmazione della mattina</rdfs:label>
+        <rdfs:label xml:lang="en">program ending hour am</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programEndingHourPm -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programEndingHourPm">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;orario di fine programmazione del pomeriggio.</rdfs:comment>
+        <rdfs:label xml:lang="it">orario fine programmazione del pomeriggio</rdfs:label>
+        <rdfs:label xml:lang="en">program ending hour pm</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programStartDate">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica la data di inizio della programmazione.</rdfs:comment>
+        <rdfs:label xml:lang="it">data inizio programmazione</rdfs:label>
+        <rdfs:label xml:lang="en">program start date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programStartingHourAm -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programStartingHourAm">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;orario d&apos;inizio  della programmazione della mattina.</rdfs:comment>
+        <rdfs:label xml:lang="it">orario inizio programmazione della mattina</rdfs:label>
+        <rdfs:label xml:lang="en">program starting hour am</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#programStartingHourPm -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#programStartingHourPm">
+        <rdfs:domain rdf:resource="http://localhost/core#EventProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica l&apos;orario d&apos;inizio della programmazione del pomeriggio.</rdfs:comment>
+        <rdfs:label xml:lang="it">orario inizio programmazione del pomeriggio</rdfs:label>
+        <rdfs:label xml:lang="en">program starting hour pm</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#province -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#province">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la provincia.</rdfs:comment>
+        <rdfs:label xml:lang="en">province</rdfs:label>
+        <rdfs:label xml:lang="it">provincia</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#rating -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#rating">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il rating basato sul numero di reviews disponibili (es. 3.5)</rdfs:comment>
+        <rdfs:label xml:lang="en">rating</rdfs:label>
+        <rdfs:label xml:lang="it">valutazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#readingTime -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#readingTime">
+        <rdfs:domain rdf:resource="http://localhost/core#Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tempo di lettura in secondi di un articolo.</rdfs:comment>
+        <rdfs:label xml:lang="en">reading time</rdfs:label>
+        <rdfs:label xml:lang="it">tempo di lettura</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#region -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#region">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#DestinationDetail"/>
+                    <rdf:Description rdf:about="http://localhost/core#PartnerRecordRestaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la regione.</rdfs:comment>
+        <rdfs:label xml:lang="en">region</rdfs:label>
+        <rdfs:label xml:lang="it">regione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#shortDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#shortDescription">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta una breve descrizione di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrizione breve</rdfs:label>
+        <rdfs:label xml:lang="en">short description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#specialOpeningHours -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#specialOpeningHours">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta eventuali orari speciali di apertura.</rdfs:comment>
+        <rdfs:label xml:lang="it">orario d&apos;apertura speciale</rdfs:label>
+        <rdfs:label xml:lang="en">special opening hours</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#stageUgcDate -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#stageUgcDate">
+        <rdfs:domain rdf:resource="http://localhost/core#ItineraryUgc"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data specifica di visita della tappa.</rdfs:comment>
+        <rdfs:label xml:lang="it">data visita tappa</rdfs:label>
+        <rdfs:label xml:lang="en">stage ugc date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#stageUgcDateOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#stageUgcDateOrder">
+        <rdfs:comment xml:lang="it">ordine di visita della tappa all&apos;interno del giorno specifico</rdfs:comment>
+        <rdfs:label xml:lang="it">ordine visita tappa</rdfs:label>
+        <rdfs:label xml:lang="en">stage ugc date order</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#stageUgcType -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#stageUgcType">
+        <rdfs:comment xml:lang="it">Questa proprietà indica la tipologia di tappa (es. destinazione, evento, offerto) all&apos;interno di un itinerario UGC</rdfs:comment>
+        <rdfs:label xml:lang="en">stage ugc type</rdfs:label>
+        <rdfs:label xml:lang="it">tipologia di tappa</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#startDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#startDateTime">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data d&apos;inizio dell&apos;evento.</rdfs:comment>
+        <rdfs:label xml:lang="it">data inizio</rdfs:label>
+        <rdfs:label xml:lang="en">start date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#status -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#status">
+        <rdfs:domain rdf:resource="http://localhost/core#OnlineContact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">questa proprietà rappresenta lo stato di una destinazione (chiuso temporaneamente ecc).</rdfs:comment>
+        <rdfs:label xml:lang="it">stato</rdfs:label>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#streetName -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#streetName">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il nome di una via.</rdfs:comment>
+        <rdfs:label xml:lang="it">nome via</rdfs:label>
+        <rdfs:label xml:lang="en">street name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#streetNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#streetNumber">
+        <rdfs:domain rdf:resource="http://localhost/core#DestinationDetail"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta un numero civico.</rdfs:comment>
+        <rdfs:label xml:lang="it">numero civico</rdfs:label>
+        <rdfs:label xml:lang="en">street number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#subTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#subTitle">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il sotto-titolo di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">sotto-titolo</rdfs:label>
+        <rdfs:label xml:lang="en">sub-title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#text -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#text">
+        <rdfs:domain rdf:resource="http://localhost/core#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il testo del paragrafo.</rdfs:comment>
+        <rdfs:label xml:lang="it">testo del paragrafo</rdfs:label>
+        <rdfs:label xml:lang="en">text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#ticketPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#ticketPrice">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Destination"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il prezzo di un biglietto.</rdfs:comment>
+        <rdfs:label xml:lang="it">prezzo biglietto</rdfs:label>
+        <rdfs:label xml:lang="en">ticket price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#title -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#title">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#EventProgram"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                    <rdf:Description rdf:about="http://localhost/core#ItineraryUgc"/>
+                    <rdf:Description rdf:about="http://localhost/core#Paragraph"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il titolo di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+        <rdfs:label xml:lang="it">titolo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#totalReviews -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#totalReviews">
+        <rdfs:domain rdf:resource="http://localhost/core#Destination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="it">questa proprietà rappresenta il numero di recensioni su cui si basa il rating.</rdfs:comment>
+        <rdfs:label xml:lang="it">recensioni totali.</rdfs:label>
+        <rdfs:label xml:lang="en">total reviews</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#type -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#type">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il tipo di evento o inrinerario.</rdfs:comment>
+        <rdfs:label xml:lang="it">tipo</rdfs:label>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#url -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#url">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Hyperlinks"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta il link alla source esterna del contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">url</rdfs:label>
+        <rdfs:label xml:lang="it">url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#validFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#validFrom">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data e l&apos;ora a partire dal quale il contenuto è valido.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid from</rdfs:label>
+        <rdfs:label xml:lang="it">valido da</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#validTo -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#validTo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Article"/>
+                    <rdf:Description rdf:about="http://localhost/core#Event"/>
+                    <rdf:Description rdf:about="http://localhost/core#Itinerary"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Questa proprietà rappresenta la data e l&apos;ora fino al quale il contenuto è valido.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid to</rdfs:label>
+        <rdfs:label xml:lang="it">valido fino</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/core#virtualEvent -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/core#virtualEvent">
+        <rdfs:domain rdf:resource="http://localhost/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Questa proprietà indica se l&apos;evento è virtuale.</rdfs:comment>
+        <rdfs:label xml:lang="it">evento virtuale</rdfs:label>
+        <rdfs:label xml:lang="en">virtual event</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/core#Agent -->
+
+    <owl:Class rdf:about="http://localhost/core#Agent">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un agente, che può essere sia fisico (es. una persona) o sociale (es. una società, un&apos;istituzione).</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+        <rdfs:label xml:lang="it">Agente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Article -->
+
+    <owl:Class rdf:about="http://localhost/core#Article">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasParagraph"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost/core#Paragraph"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#readingTime"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasEvent"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasHyperlink"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Hyperlinks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSource"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSponsor"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Sponsor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#documentsPDF"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#externalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fileAudio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#gifs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#internalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#url"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#creationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#firstPublicationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#primaryTag"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#lastModificationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#overTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#subTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validTo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un determinato articolo editoriale.</rdfs:comment>
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+        <rdfs:label xml:lang="it">Articolo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Author -->
+
+    <owl:Class rdf:about="http://localhost/core#Author">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Agent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#authorImage"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta l&apos;autore di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+        <rdfs:label xml:lang="it">Autore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Characteristic -->
+
+    <owl:Class rdf:about="http://localhost/core#Characteristic">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le caratteristiche, intese come aspetti, attributi o qualità di un&apos; entità.</rdfs:comment>
+        <rdfs:label xml:lang="it">Caratteristica</rdfs:label>
+        <rdfs:label xml:lang="en">Characteristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Destination -->
+
+    <owl:Class rdf:about="http://localhost/core#Destination">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/core#Itinerary"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasLinkedDestination"/>
+                        <owl:allValuesFrom rdf:resource="http://localhost/core#Destination"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasPartnerRecordRestaurant"/>
+                        <owl:allValuesFrom rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasOnlineContact"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://localhost/core#OnlineContact"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#category"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#officialName"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#destinationType"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#googleDescription"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#idAdobePlace"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#longDescription"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#owner"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#priceLevel"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#shortDescription"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#totalReviews"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasParagraph"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasHyperlink"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Hyperlinks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasLinkedParagraph"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasPartnerRecordRestaurant"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#PartnerRecordRestaurant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSponsor"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Sponsor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#documentsPDF"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#externalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fileAudio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#gifs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#internalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#ticketPrice"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#firstPublicationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#primaryTag"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#lastModificationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#last_publication_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#rating"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta una destinazione (es. città, museo, ristorante etc..)</rdfs:comment>
+        <rdfs:label xml:lang="en">Destination</rdfs:label>
+        <rdfs:label xml:lang="it">Destinazione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#DestinationDetail -->
+
+    <owl:Class rdf:about="http://localhost/core#DestinationDetail">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Characteristic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#idEsri"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#country"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#geometryType"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#addressArea"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#altitude"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#coordinatesReferencedSystem"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#district"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#geographicalDistribution"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#lastUpdatePlaceId"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#placeId"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#province"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#streetName"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#streetNumber"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#listOfServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#otherServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fullAddress"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#latitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#longitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#postalCode"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#region"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta i dettagli di una specifica destinazione. es. address, listOfServices etc..</rdfs:comment>
+        <rdfs:label xml:lang="en">Destination Detail</rdfs:label>
+        <rdfs:label xml:lang="it">Dettagli destinazione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Event -->
+
+    <owl:Class rdf:about="http://localhost/core#Event">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#EventOrSituation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#duration"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#startDateTime"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#agent"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#endDateTime"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#virtualEvent"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasLinkedParagraph"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSponsor"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Sponsor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#isEventOf"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#isEventOf"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Itinerary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#isSubEventOf"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#isSuperEventOf"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#documentsPDF"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#externalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fileAudio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#gifs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idsAdobePlace"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#internalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#listOfServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#otherServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#ticketPrice"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#url"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#firstPublicationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#primaryTag"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#lastModificationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#poiOpeningHours"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#subTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#type"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validTo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un determinato evento.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="it">Evento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#EventOrSituation -->
+
+    <owl:Class rdf:about="http://localhost/core#EventOrSituation">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta ogni entità che scorre nel tempo.Es. concerti, gare, viaggi etc..</rdfs:comment>
+        <rdfs:label xml:lang="en">Event or Situation</rdfs:label>
+        <rdfs:label xml:lang="it">Evento o Situazione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#EventProgram -->
+
+    <owl:Class rdf:about="http://localhost/core#EventProgram">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#EventOrSituation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programDescription"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programEndDate"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programStartDate"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programEndingHourAm"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programEndingHourPm"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programStartingHourAm"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#programStartingHourPm"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#EventOrSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#last_publication_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la situazione in cui l&apos;evento è suddiviso in più tappe, divise in più giorni (es. Jova Beach Party)</rdfs:comment>
+        <rdfs:label xml:lang="en">Event Program</rdfs:label>
+        <rdfs:label xml:lang="it">Evento con programmazione</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Hyperlinks -->
+
+    <owl:Class rdf:about="http://localhost/core#Hyperlinks">
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#url"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta i colegamenti ipertestuali presenti nei vari contenuti.</rdfs:comment>
+        <rdfs:label xml:lang="it">Collegamenti ipertestuali</rdfs:label>
+        <rdfs:label xml:lang="en">Hyperlinks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Itinerary -->
+
+    <owl:Class rdf:about="http://localhost/core#Itinerary">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://localhost/core#Destination"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasStage"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost/core#Stage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#bestPeriod"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#bestPeriodFrom"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#bestPeriodTo"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#mapPdf"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#difficulty"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:someValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasEvent"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasHyperlink"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Hyperlinks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSource"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasSponsor"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Sponsor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#externalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fileAudio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#gifs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idsAdobePlace"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#internalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#url"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#creationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#firstPublicationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#primaryTag"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#durationHours"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#lastModificationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#last_publication_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#overTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#subTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#type"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#validTo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta un itinerario.</rdfs:comment>
+        <rdfs:label xml:lang="it">Itinerario</rdfs:label>
+        <rdfs:label xml:lang="en">Itinerary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#ItineraryUgc -->
+
+    <owl:Class rdf:about="http://localhost/core#ItineraryUgc">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasStageUgc"/>
+                        <owl:someValuesFrom rdf:resource="http://localhost/core#StageItineraryUgc"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#referencedToItinerary"/>
+                        <owl:allValuesFrom rdf:resource="http://localhost/core#Itinerary"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#idAccount"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#creationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#lastModificationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta gli itinerari user generated contet, cioè gli itinerari generati dall&apos;utente.</rdfs:comment>
+        <rdfs:label xml:lang="it">Itinerario generato dall&apos;utente</rdfs:label>
+        <rdfs:label xml:lang="en">Itinerary ugc</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Object -->
+
+    <owl:Class rdf:about="http://localhost/core#Object">
+        <rdfs:comment xml:lang="it">Questa classe rappresenta ogni entità che tende ad essere stabile in un tempo più o meno lungo; es. case, città, organizzazioni, opere d&apos;arte, articoli etc... Gli oggetti tendono a contrapporsi agli eventi che invece scorrono nel tempo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object</rdfs:label>
+        <rdfs:label xml:lang="it">Oggetto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#OnlineContact -->
+
+    <owl:Class rdf:about="http://localhost/core#OnlineContact">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Characteristic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#emailPec"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#faxNumber"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#poiEmail"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#poiWebSiteUrl"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#specialOpeningHours"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#status"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#poiOpeningHours"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#poiTelephoneNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta i punti di contatto di una destinazione.</rdfs:comment>
+        <rdfs:label xml:lang="en">Online contact</rdfs:label>
+        <rdfs:label xml:lang="it">Punti di contatto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Paragraph -->
+
+    <owl:Class rdf:about="http://localhost/core#Paragraph">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Stage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#order"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#text"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasEvent"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasHyperlink"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Hyperlinks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fileAudio"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#gifs"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#internalVideos"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#title"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#durationHours"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#subTitle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta il paragrafo di un particolare contenuto editoriale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Paragrafo</rdfs:label>
+        <rdfs:label xml:lang="en">Paragraph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#PartnerRecordRestaurant -->
+
+    <owl:Class rdf:about="http://localhost/core#PartnerRecordRestaurant">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#ambienceType"/>
+                        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#bookable"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasGiftCard"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#idMerchant"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#partnerName"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#distinction"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasPayment"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasStock"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#hasTheForkPay"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#idTripAdvisor"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#insiderDescription"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#insiderStatus"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#insiderTip"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#mainType"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#numberOfReviews"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#additionalManualTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aemTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#aiChosenTags"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#images"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#listOfServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#otherServices"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#poiTelephoneNumber"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#fullAddress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#latitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#longitude"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#otherType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#poiOpeningHours"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#postalCode"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#rating"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#region"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le informazioni relative ad un ristorante che provengono dal database di un partner.</rdfs:comment>
+        <rdfs:label xml:lang="en">Partner Record Restaurant</rdfs:label>
+        <rdfs:label xml:lang="it">Ristorante proveniente dal partner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Source -->
+
+    <owl:Class rdf:about="http://localhost/core#Source">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#externalUrl"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta la risorsa di riferimento di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="it">Fonte</rdfs:label>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Sponsor -->
+
+    <owl:Class rdf:about="http://localhost/core#Sponsor">
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Characteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#idIngestedContent"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta lo sponsor di un contenuto.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sponsor</rdfs:label>
+        <rdfs:label xml:lang="it">Sponsor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#Stage -->
+
+    <owl:Class rdf:about="http://localhost/core#Stage">
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#StageItineraryUgc -->
+
+    <owl:Class rdf:about="http://localhost/core#StageItineraryUgc">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://localhost/core#Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#isStageUgcOf"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://localhost/core#ItineraryUgc"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#isStartPoint"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#stageUgcDate"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#stageUgcDateOrder"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://localhost/core#stageUgcType"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://localhost/core#Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasDestination"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Destination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://localhost/core#hasEvent"/>
+                <owl:allValuesFrom rdf:resource="http://localhost/core#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Questa classe rappresenta le tappe dell&apos;itinerario definito dall&apos;utente.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stage itinerary ugc</rdfs:label>
+        <rdfs:label xml:lang="it">Tappa itinerario definito dall&apos;utente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/core#TemporalEntity -->
+
+    <owl:Class rdf:about="http://localhost/core#TemporalEntity">
+        <rdfs:comment xml:lang="it">Classe che rappresenta un entità di natura temporale.</rdfs:comment>
+        <rdfs:label xml:lang="it">Entità Temporale</rdfs:label>
+        <rdfs:label xml:lang="en">Temporal Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/core#Itinerario_lazio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#Itinerario_lazio">
+        <core:hasAuthor rdf:resource="http://localhost/core#Stefano"/>
+        <core:hasDestination rdf:resource="http://localhost/core#Roma"/>
+        <core:hasStage rdf:resource="http://localhost/core#giro_del_colosseo_stage"/>
+        <core:difficulty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</core:difficulty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#Roma -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#Roma">
+        <core:hasLinkedDestination rdf:resource="http://localhost/core#fontana_di_Trevi_destination"/>
+        <core:hasPartnerRecordRestaurant rdf:resource="http://localhost/core#ristorante_Palmieri"/>
+        <core:category>Città</core:category>
+        <core:documentsPDF>ciao</core:documentsPDF>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#Stefano -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#Stefano">
+        <core:authorImage>Immagine</core:authorImage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#concert_circo_massimo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#concert_circo_massimo">
+        <core:hasHyperlink rdf:resource="http://localhost/core#1234Hyperlink"/>
+        <core:hasLinkedParagraph rdf:resource="http://localhost/core#storia_del_circo_massimo_paragraph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#concerto_primo_maggio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#concerto_primo_maggio">
+        <core:hasDestination rdf:resource="http://localhost/core#Roma"/>
+        <core:isSuperEventOf rdf:resource="http://localhost/core#concerto_sfera_e_basta"/>
+        <core:endDateTime>01/05/2023</core:endDateTime>
+        <core:virtualEvent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</core:virtualEvent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#concerto_sfera_e_basta -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#concerto_sfera_e_basta"/>
+    
+
+
+    <!-- http://localhost/core#degustazione_locale -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#degustazione_locale"/>
+    
+
+
+    <!-- http://localhost/core#fontana_di_Trevi_destination -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#fontana_di_Trevi_destination"/>
+    
+
+
+    <!-- http://localhost/core#giro_del_colosseo_stage -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#giro_del_colosseo_stage"/>
+    
+
+
+    <!-- http://localhost/core#i_migliori_concerti_di_Roma -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#i_migliori_concerti_di_Roma">
+        <core:hasAuthor rdf:resource="http://localhost/core#Stefano"/>
+        <core:hasDestination rdf:resource="http://localhost/core#Roma"/>
+        <core:hasEvent rdf:resource="http://localhost/core#concerto_primo_maggio"/>
+        <core:hasHyperlink rdf:resource="http://localhost/core#1234Hyperlink"/>
+        <core:hasParagraph rdf:resource="http://localhost/core#concert_circo_massimo"/>
+        <core:documentsPDF>A</core:documentsPDF>
+        <core:readingTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</core:readingTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#i_migliori_ristoranti_di_roma -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#i_migliori_ristoranti_di_roma">
+        <core:hasDestination rdf:resource="http://localhost/core#Roma"/>
+        <core:hasParagraph rdf:resource="http://localhost/core#ristoranti_in_centro_paragraph"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#ristorante_Palmieri -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#ristorante_Palmieri">
+        <core:ambienceType>Italiano</core:ambienceType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#ristoranti_in_centro_paragraph -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#ristoranti_in_centro_paragraph">
+        <core:hasDestination rdf:resource="http://localhost/core#Roma"/>
+        <core:hasEvent rdf:resource="http://localhost/core#degustazione_locale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost/core#storia_del_circo_massimo_paragraph -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#storia_del_circo_massimo_paragraph"/>
+    
+
+
+    <!-- http://localhost/core#1234Hyperlink -->
+
+    <owl:NamedIndividual rdf:about="http://localhost/core#1234Hyperlink"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

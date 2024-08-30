@@ -1,0 +1,2326 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.localhost/core"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.localhost/core"
+     versionIRI="http://www.localhost/core/1.5">
+    <Prefix name="" IRI="http://www.localhost/core"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="article" IRI="http://www.semanticweb.org/article#"/>
+    <Import>https://w3id.org/italia/onto/ACCO/0.4</Import>
+    <Import>https://w3id.org/italia/onto/AccessCondition/0.1</Import>
+    <Import>https://w3id.org/italia/onto/CLV/1.0</Import>
+    <Import>https://w3id.org/italia/onto/COV/0.12</Import>
+    <Import>https://w3id.org/italia/onto/MU/0.4</Import>
+    <Import>https://w3id.org/italia/onto/POI/0.3</Import>
+    <Import>https://w3id.org/italia/onto/POT/0.3</Import>
+    <Import>https://w3id.org/italia/onto/RO/0.3</Import>
+    <Import>https://w3id.org/italia/onto/SM/0.7</Import>
+    <Import>https://w3id.org/italia/onto/TI/0.8</Import>
+    <Import>https://w3id.org/italia/onto/l0/0.8</Import>
+    <Declaration>
+        <Class IRI="#Article"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CivicNumbering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DestinationPOI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hyperlinks"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paragraph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sponsor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tags"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Video"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#acceptedPaymentMethods"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#availability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cancelPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#foodProducerGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#groupSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#priceRange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#route"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#stage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Produce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#crosses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAcceptedPaymentMethods"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAdditionalInformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArticleMaps"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAudience"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAudio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAuthors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAvailability"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAwards"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBestPeriod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCancelPolicy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasClientType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDietaryRequirements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEligibleQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEstimatedDuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEvents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFeaturesOffered"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodEstablishmentCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodProducerGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodProductFeatures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodProductTypology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasFoodProductTypologyFeatures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGroupSize"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHyperlinks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMenu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMenuItem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMenuSection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNotEligibleUser"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOfferAudience"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOfferLocale"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOpeningHours"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParagraphs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPriceRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPricingMode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRoute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRouteCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRouteStage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRouteType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasServiceOptions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSources"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSponsors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTags"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTheme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTypeOfCuisine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUserType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVideo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesFoodProduct"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIncludedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNotEligibleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOfferedInLangs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProducedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#makes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#notIncludes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/italia/onto/SM#hasReview"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ArticoloTematicoEventi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CIN"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#CIR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#additionalInformartion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#articleOverTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#articleSubTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#articleText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#articleTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#articolotematicoitinerario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#availEndMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#availStartMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#availability"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#averageRatingValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cancel_reservation_anytime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#credit_card_accepted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#currency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departureDateTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departurePoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#departurePointDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#distinction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#imageCredit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#included_breakfast"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#interestOfExperience"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#keywords"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lastPubblicationDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#measurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numberofstages"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#occupancy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ordering"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paragraphOrder"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paragraphSubTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paragraphText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paragraphTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#parking"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#price"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#priceCurrency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ratingCount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#returnPoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#returnPointDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sauna"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#shortDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tags"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#typeOfExperience"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wifi_access"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DestinationPOI"/>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAuthors"/>
+            <Class IRI="#Author"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasParagraphs"/>
+            <Class IRI="#Paragraph"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAudio"/>
+            <Class IRI="#Audio"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEvents"/>
+            <Class IRI="#PublicEvent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasHyperlinks"/>
+            <Class IRI="#Hyperlinks"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNotEligibleUser"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/UserType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasSources"/>
+            <Class IRI="#Source"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasSponsors"/>
+            <Class IRI="#Sponsor"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVideo"/>
+            <Class IRI="#Video"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POI/includesPOI"/>
+            <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POT/hasEligibleUser"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/UserType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POT/hasOffer"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/SM/hasImage"/>
+            <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ArticoloTematicoEventi"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#articolotematicoitinerario"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#keywords"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#articleText"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#articleTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#language"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/TI/date"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/TI/duration"/>
+            <Datatype abbreviatedIRI="xsd:duration"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/identifier"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#articleOverTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#articleSubTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#lastPubblicationDate"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Article"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audio"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/SM/hasImage"/>
+            <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Author"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CivicNumbering"/>
+        <Class IRI="https://w3id.org/italia/onto/CLV/AdminUnitComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DestinationPOI"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hyperlinks"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hyperlinks"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hyperlinks"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Language"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAudio"/>
+            <Class IRI="#Audio"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasEvents"/>
+            <Class IRI="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasHyperlinks"/>
+            <Class IRI="#Hyperlinks"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVideo"/>
+            <Class IRI="#Video"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POI/includesPOI"/>
+            <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POT/hasOffer"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/SM/hasImage"/>
+            <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#language"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#paragraphOrder"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#paragraphText"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#paragraphSubTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paragraph"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#paragraphTitle"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicEvent"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Source"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Source"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Source"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Source"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponsor"/>
+        <Class IRI="https://w3id.org/italia/onto/COV/Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tags"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tags"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Video"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#acceptedPaymentMethods"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#availability"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cancelPolicy"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#category"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Topic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#category"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#category"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#foodProducerGroup"/>
+        <Class IRI="https://w3id.org/italia/onto/COV/Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#groupSize"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#groupSize"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/italia/onto/MU/hasMeasurementUnit"/>
+            <Class IRI="https://w3id.org/italia/onto/MU/MeasurementUnit"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#groupSize"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/ACCO/maxValue"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#groupSize"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/ACCO/minValue"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#priceRange"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#region"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#route"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#route"/>
+        <Class IRI="https://w3id.org/italia/onto/l0/Sequence"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#route"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#route"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#route"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#length"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stage"/>
+        <Class IRI="https://w3id.org/italia/onto/POI/MultiplePointOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#stage"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#ordering"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#CIN"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#CIR"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#credit_card_accepted"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/AccommodationRoom"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/identifier"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/AccommodationRoom"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#occupancy"/>
+            <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/AccessCondition/hasAccessCondition"/>
+            <Class IRI="https://w3id.org/italia/onto/AccessCondition/OpeningHoursSpecification"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/SM/hasOnlineContactPoint"/>
+            <Class IRI="https://w3id.org/italia/onto/SM/OnlineContactPoint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasAudio"/>
+            <Class IRI="#Audio"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasVideo"/>
+            <Class IRI="#Video"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#language"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAcceptedPaymentMethods"/>
+            <Class IRI="#acceptedPaymentMethods"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTags"/>
+            <Class IRI="#Tags"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/COV/hasCategory"/>
+            <Class IRI="#category"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCancelPolicy"/>
+            <Class IRI="#cancelPolicy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://w3id.org/italia/onto/POT/hasEligibleUser"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/UserType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasNotEligibleUser"/>
+            <Class IRI="https://w3id.org/italia/onto/POT/UserType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isNotEligibleFor"/>
+            <Class IRI="#region"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasEligibleQuantity"/>
+            <Class IRI="#groupSize"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://w3id.org/italia/onto/TI/hasDuration"/>
+            <Class IRI="https://w3id.org/italia/onto/TI/Duration"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#price"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#currency"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#measurementUnit"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/POT/PriceSpecification"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#imageCredit"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/SM/URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/SM/Image"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/SM/Rating"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#averageRatingValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/SM/Rating"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ratingCount"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/l0/Characteristic"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="https://w3id.org/italia/onto/MU/value"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/italia/onto/l0/EventOrSituation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="https://w3id.org/italia/onto/l0/name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEstimatedDuration"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNotEligibleFor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesFoodProduct"/>
+        <ObjectProperty IRI="#isIncludedIn"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasArticleMaps"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAudio"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasClientType"/>
+        <Class IRI="https://w3id.org/italia/onto/POI/PointOfInterest"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHyperlinks"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNotEligibleUser"/>
+        <Class IRI="#Article"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOfferAudience"/>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVideo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#includesFoodProduct"/>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAudio"/>
+        <Class IRI="#Audio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHyperlinks"/>
+        <Class IRI="#Hyperlinks"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNotEligibleUser"/>
+        <Class IRI="https://w3id.org/italia/onto/POT/UserType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasVideo"/>
+        <Class IRI="#Video"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isIncludedIn"/>
+        <Class IRI="https://w3id.org/italia/onto/POT/Offer"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#CIN"/>
+        <DataProperty IRI="https://w3id.org/italia/onto/l0/identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#CIR"/>
+        <DataProperty IRI="https://w3id.org/italia/onto/l0/identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#articleOverTitle"/>
+        <DataProperty IRI="#articleTitle"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#articleSubTitle"/>
+        <DataProperty IRI="#articleTitle"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#articleText"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#longDescription"/>
+        <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#paragraphSubTitle"/>
+        <DataProperty IRI="#paragraphTitle"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#shortDescription"/>
+        <DataProperty IRI="https://w3id.org/italia/onto/l0/description"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#availability"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/AccommodationRoom"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cancel_reservation_anytime"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#credit_card_accepted"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#occupancy"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/AccommodationRoom"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#parking"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sauna"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wifi_access"/>
+        <Class IRI="https://w3id.org/italia/onto/ACCO/Accommodation"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="en">Article in which are written by any author which maybe related to any event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="it">Articolo in cui sono scritti da autori informazioni relative a eventi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="en">Article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Article</IRI>
+        <Literal xml:lang="it">Articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ArticoloTematicoEventi</IRI>
+        <Literal xml:lang="en">articolo tematico eventi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Audio</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta la presenza di contenuti audio all&apos;interno dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Audio</IRI>
+        <Literal xml:lang="en">This class represents the presence of audio content within the article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Audio</IRI>
+        <Literal xml:lang="en">Audio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Audio</IRI>
+        <Literal xml:lang="it">Audio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Author</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta colui che ha composto l&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Author</IRI>
+        <Literal xml:lang="en">This class represents the person who composed the article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Author</IRI>
+        <Literal xml:lang="en">Author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Author</IRI>
+        <Literal xml:lang="it">Autore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CivicNumbering</IRI>
+        <Literal xml:lang="it">Questa classe indica numero civico dell&apos;indirizzo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CivicNumbering</IRI>
+        <Literal xml:lang="en">This class represents the civic numbering of the address</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CivicNumbering</IRI>
+        <Literal xml:lang="en">Civic Numbering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CivicNumbering</IRI>
+        <Literal xml:lang="it">Numero Civico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DestinationPOI</IRI>
+        <Literal xml:lang="en">questa classe rappresenta un&apos;attrazione sul territorio correlabile ad un punto di interesse oppure ad un area geografica che permane nel medio-lungo termine (es: il Colosseo, la Fontana di Trevi)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DestinationPOI</IRI>
+        <Literal xml:lang="en">this class represents an attraction correlated to a geographical area or a point of interest which remains in the medium to the long term</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DestinationPOI</IRI>
+        <Literal xml:lang="en">Destination (Point of Interest)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DestinationPOI</IRI>
+        <Literal xml:lang="it">Destinazione (Punto di Interesse)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hyperlinks</IRI>
+        <Literal xml:lang="en">Reference to specify that from where that paragraph belong if it have some text which we take from other resources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hyperlinks</IRI>
+        <Literal xml:lang="en">Hyperlinks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hyperlinks</IRI>
+        <Literal xml:lang="it">Hyperlinks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Hyperlinks</IRI>
+        <Literal xml:lang="it">Indica un riferimento per specificare a chi appartiene quel paragrafo se ha del testo che prendiamo da altre risorse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Language</IRI>
+        <Literal xml:lang="it">Questa classe indica la lingua utilizzata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Language</IRI>
+        <Literal xml:lang="en">This class represents the language used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Language</IRI>
+        <Literal xml:lang="en">Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Language</IRI>
+        <Literal xml:lang="it">Lingua</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Paragraph</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta le suddivisioni interne in cui è diviso il testo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Paragraph</IRI>
+        <Literal xml:lang="en">This class represents the internal subdivision into which the text is divided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Paragraph</IRI>
+        <Literal xml:lang="it">Paragrafo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Paragraph</IRI>
+        <Literal xml:lang="en">Paragraph</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Produce</IRI>
+        <Literal xml:lang="en">produces</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PublicEvent</IRI>
+        <Literal xml:lang="en">Public Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Source</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta le risorse che sono state utilizzate dall&apos;autore per la composizione dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Source</IRI>
+        <Literal xml:lang="en">This class represents the resources that have been used by the author for the composition of the article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Source</IRI>
+        <Literal xml:lang="it">Fonte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Source</IRI>
+        <Literal xml:lang="en">Source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sponsor</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta un&apos;ente o una persona che promuove un&apos;attività, un&apos;evento culturale, sportivo, di spettacolo etc. Questa promozione avviene attraverso un sostegno finanziario o anche attraverso la fornitura di prodotti o servizi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sponsor</IRI>
+        <Literal xml:lang="en">Sponsor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sponsor</IRI>
+        <Literal xml:lang="it">Sponsor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sponsor</IRI>
+        <Literal xml:lang="en">This class represents an organisation or person promoting an activity, cultural event, sporting event, entertainment etc. This promotion is done through financial support or even through the provision of products or services.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Video</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta la presenza di contenuti video all&apos;interno dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Video</IRI>
+        <Literal xml:lang="en">This class represents the presence of video content within the article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Video</IRI>
+        <Literal xml:lang="en">Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Video</IRI>
+        <Literal xml:lang="it">Video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#acceptedPaymentMethods</IRI>
+        <Literal xml:lang="it">Classe che rappresenta i metodi di pagamento accettati</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acceptedPaymentMethods</IRI>
+        <Literal xml:lang="en">Accepted Payment Methods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#additionalInformartion</IRI>
+        <Literal xml:lang="it">Rappresenta informazioni utili aggiuntive relative ad una determinata classe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#additionalInformartion</IRI>
+        <Literal xml:lang="it">Informazioni aggiuntive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#additionalInformartion</IRI>
+        <Literal xml:lang="en">additional Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleOverTitle</IRI>
+        <Literal xml:lang="en">article Over Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleSubTitle</IRI>
+        <Literal xml:lang="en">article Sub Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#articleText</IRI>
+        <Literal xml:lang="it">questa proprietà indica il contenuto testuale dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#articleText</IRI>
+        <Literal xml:lang="en">this property indicates the textual content of the article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleText</IRI>
+        <Literal xml:lang="it">Testo dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleText</IRI>
+        <Literal xml:lang="en">article Text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleTitle</IRI>
+        <Literal xml:lang="en">article Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articleTitle</IRI>
+        <Literal xml:lang="it">titolo dell&apos;articolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#articolotematicoitinerario</IRI>
+        <Literal xml:lang="en">articolo tematico itinerario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#availEndMonth</IRI>
+        <Literal xml:lang="it">Rappresenta il mese ultimo in cui il prodotto tipico è disponibile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#availStartMonth</IRI>
+        <Literal xml:lang="it">Rappresenta il primo mese in cui il prodotto tipico è disponibile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#availability</IRI>
+        <Literal xml:lang="it">Questa classe rappresenta la disponibilità di un oggetto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#availability</IRI>
+        <Literal xml:lang="en">this property represents the availability of an object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#availability</IRI>
+        <Literal xml:lang="en">Availability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#availability</IRI>
+        <Literal xml:lang="it">disponibilità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#averageRatingValue</IRI>
+        <Literal xml:lang="en">average rating value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cancelPolicy</IRI>
+        <Literal xml:lang="en">Class used to represent cancellation policies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cancelPolicy</IRI>
+        <Literal xml:lang="it">Classe utilizzata per rappresentare le politiche di cancellazione.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cancelPolicy</IRI>
+        <Literal xml:lang="en">Cancel Policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cancelPolicy</IRI>
+        <Literal xml:lang="en">Politiche di Cancellazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cancel_reservation_anytime</IRI>
+        <Literal xml:lang="it">questa proprietà rappresenta la possibilità di cancellare la prenotazione in ogni momento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cancel_reservation_anytime</IRI>
+        <Literal xml:lang="en">this property represents the possibility to delete the reservation anytime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cancel_reservation_anytime</IRI>
+        <Literal xml:lang="en">cancel reservation anytime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cancel_reservation_anytime</IRI>
+        <Literal xml:lang="it">prenotazione sempre cancellabile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#category</IRI>
+        <Literal xml:lang="en">Category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#category</IRI>
+        <Literal xml:lang="it">Classe che rappresenta la categoria di riferimento. Es: Mare, Natura, Enogastronomia Etc..</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#credit_card_accepted</IRI>
+        <Literal xml:lang="it">Questa proprietà rappresenta la tipologia di carte di credito con cui è possibile pagare</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#credit_card_accepted</IRI>
+        <Literal xml:lang="en">this property indicates the type of credit cards you can pay with</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#credit_card_accepted</IRI>
+        <Literal xml:lang="it">carte accettate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#credit_card_accepted</IRI>
+        <Literal xml:lang="en">credit card accepted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departureDateTime</IRI>
+        <Literal xml:lang="en">Property used to represent the available dates and times at which an experience can start. Es: 16/08/2022;07:30 AM  | 23/08/2022;07:30 AM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departureDateTime</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare le date disponibili e gli orari disponiili in cui può iniziare un&apos;esperienza. Es: 16/08/2022;07:30 AM  | 23/08/2022;07:30 AM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departureDateTime</IRI>
+        <Literal xml:lang="it">Data e Orario di Partenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departureDateTime</IRI>
+        <Literal xml:lang="en">Departure Datetime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departurePoint</IRI>
+        <Literal xml:lang="en">Property used to represent the starting point of an experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departurePoint</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare il punto di partenza di un’esperienza.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departurePoint</IRI>
+        <Literal xml:lang="en">Departure Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departurePoint</IRI>
+        <Literal xml:lang="it">Punto di Partenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departurePointDescription</IRI>
+        <Literal xml:lang="en">Property used to indicate additional useful information about the starting point of the experience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#departurePointDescription</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per indicare informazioni utili aggiuntive riguardo il punto di partenza dell&apos;esperienza.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departurePointDescription</IRI>
+        <Literal xml:lang="en">Departure Point Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#departurePointDescription</IRI>
+        <Literal xml:lang="it">Descrizione Punto di Partenza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#foodProducerGroup</IRI>
+        <Literal xml:lang="en">Class used to represent a group of which the producer is a member. E.g.: Producers&apos; Group, Consortium, Cooperatives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#foodProducerGroup</IRI>
+        <Literal xml:lang="it">Classe utilizzata per rappresentare un gruppo di cui fa parte il produttore. Es: Gruppo di Produttori, Consorzi, Cooperative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#foodProducerGroup</IRI>
+        <Literal xml:lang="en">Food Producer Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#foodProducerGroup</IRI>
+        <Literal xml:lang="it">Gruppo di Produttori Enogastronomici</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#groupSize</IRI>
+        <Literal xml:lang="en">Class used to represent the minimum and maximum number of people admitted to an experience.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#groupSize</IRI>
+        <Literal xml:lang="it">Classe utilizzata per rappresentare il numero minimo e il numero massimo ammessi ad un&apos;esperienza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#groupSize</IRI>
+        <Literal xml:lang="en">Eligible Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#groupSize</IRI>
+        <Literal xml:lang="it">Quantità eligibile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAcceptedPaymentMethods</IRI>
+        <Literal xml:lang="en">has accepted payment methods</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAdditionalInformation</IRI>
+        <Literal xml:lang="en">has additional information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAudience</IRI>
+        <Literal xml:lang="en">has audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAudio</IRI>
+        <Literal xml:lang="en">has audio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAuthors</IRI>
+        <Literal xml:lang="en">has Authors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAvailability</IRI>
+        <Literal xml:lang="en">has availability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAwards</IRI>
+        <Literal xml:lang="en">has awards</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasBestPeriod</IRI>
+        <Literal xml:lang="en">has best period</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCancelPolicy</IRI>
+        <Literal xml:lang="en">has cancel policy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasClientType</IRI>
+        <Literal xml:lang="en">has client type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCountry</IRI>
+        <Literal xml:lang="en">has country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDietaryRequirements</IRI>
+        <Literal xml:lang="en">has dietary requirements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEligibleQuantity</IRI>
+        <Literal xml:lang="en">has eligible quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEvents</IRI>
+        <Literal xml:lang="en">has Events</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFeaturesOffered</IRI>
+        <Literal xml:lang="en">has features offered</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodCategory</IRI>
+        <Literal xml:lang="en">has food category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodEstablishmentCategory</IRI>
+        <Literal xml:lang="en">has food establishment category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodProducerGroup</IRI>
+        <Literal xml:lang="en">has food producer group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodProductFeatures</IRI>
+        <Literal xml:lang="en">has food product features</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodProductTypology</IRI>
+        <Literal xml:lang="en">has food product typology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasFoodProductTypologyFeatures</IRI>
+        <Literal xml:lang="en">has food product typology features</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasGroupSize</IRI>
+        <Literal xml:lang="en">has group size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasHyperlinks</IRI>
+        <Literal xml:lang="en">has hyperlinks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLanguage</IRI>
+        <Literal xml:lang="en">has language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en">has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMenu</IRI>
+        <Literal xml:lang="en">has menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMenuItem</IRI>
+        <Literal xml:lang="en">has menu item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMenuSection</IRI>
+        <Literal xml:lang="en">has menu section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasNotEligibleUser</IRI>
+        <Literal xml:lang="en">has not eligible users</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOfferAudience</IRI>
+        <Literal xml:lang="en">has offer audience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOfferLocale</IRI>
+        <Literal xml:lang="en">has offer locale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParagraphs</IRI>
+        <Literal xml:lang="en">has Paragraphs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPriceRange</IRI>
+        <Literal xml:lang="en">has price range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPricingMode</IRI>
+        <Literal xml:lang="en">has pricing mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRouteCategory</IRI>
+        <Literal xml:lang="en">has route category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRouteType</IRI>
+        <Literal xml:lang="en">has route type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSources</IRI>
+        <Literal xml:lang="en">has sources</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSponsors</IRI>
+        <Literal xml:lang="en">has Sponsors</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTheme</IRI>
+        <Literal xml:lang="en">has theme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasTypeOfCuisine</IRI>
+        <Literal xml:lang="en">has type of cuisine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUserType</IRI>
+        <Literal xml:lang="en">has user type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasVideo</IRI>
+        <Literal xml:lang="en">has video</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#imageCredit</IRI>
+        <Literal xml:lang="en">image Credit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#included_breakfast</IRI>
+        <Literal xml:lang="en">this property includes if the breakfast is included or not</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#included_breakfast</IRI>
+        <Literal xml:lang="it">colazione inclusa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#included_breakfast</IRI>
+        <Literal xml:lang="en">included breakfast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#includesFoodProduct</IRI>
+        <Literal xml:lang="en">includes food product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#interestOfExperience</IRI>
+        <Literal xml:lang="en">Property used to represent the specific interest of the experience. E.g.: Food and Wine, Nature etc...;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interestOfExperience</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare l’interesse specifico dell’esperienza. Es: Enogastronomica, Natura etc…;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interestOfExperience</IRI>
+        <Literal xml:lang="it">categoria dell&apos;esperienza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interestOfExperience</IRI>
+        <Literal xml:lang="en">category of experience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isIncludedIn</IRI>
+        <Literal xml:lang="en">is included in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isNotEligibleFor</IRI>
+        <Literal xml:lang="en">is not eligible for region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isOfferedInLangs</IRI>
+        <Literal xml:lang="en">Is Offered In Langs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isProducedBy</IRI>
+        <Literal xml:lang="en">is produced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#keywords</IRI>
+        <Literal xml:lang="en">keywords</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#keywords</IRI>
+        <Literal xml:lang="it">parole chiave</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#length</IRI>
+        <Literal xml:lang="en">length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#longDescription</IRI>
+        <Literal xml:lang="en">long description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#measurementUnit</IRI>
+        <Literal xml:lang="en">Measurement Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#notIncludes</IRI>
+        <Literal xml:lang="en">not includes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#numberofstages</IRI>
+        <Literal xml:lang="en">number of stages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ordering</IRI>
+        <Literal xml:lang="it">Proprietà che rappresenta l&apos;ordine numerico in cui si trova la tappa di un percorso o un&apos;escursione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ordering</IRI>
+        <Literal xml:lang="en">ordering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ordering</IRI>
+        <Literal xml:lang="it">ordine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#paragraphOrder</IRI>
+        <Literal xml:lang="en">paragraph Order</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#paragraphSubTitle</IRI>
+        <Literal xml:lang="en">paragraph Sub Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#paragraphText</IRI>
+        <Literal xml:lang="en">paragraph text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#paragraphTitle</IRI>
+        <Literal xml:lang="en">paragraph Title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#parking</IRI>
+        <Literal xml:lang="it">parcheggio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#parking</IRI>
+        <Literal xml:lang="en">parking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/italia/onto/ADMS/type"/>
+        <IRI>#parking</IRI>
+        <Literal xml:lang="it"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="https://w3id.org/italia/onto/ADMS/type"/>
+        <IRI>#parking</IRI>
+        <Literal xml:lang="it">boolean</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#priceCurrency</IRI>
+        <Literal xml:lang="en">Price Currency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#priceCurrency</IRI>
+        <Literal xml:lang="it">Valuta. Es: Eur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#priceRange</IRI>
+        <Literal xml:lang="it">Questa classe viene utilizzata per rappresentare il range di prezzo utilizzato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#priceRange</IRI>
+        <Literal xml:lang="en">This class is used to represent the price range used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#priceRange</IRI>
+        <Literal xml:lang="en">Price Range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#priceRange</IRI>
+        <Literal xml:lang="it">Range di Prezzo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ratingCount</IRI>
+        <Literal xml:lang="it">numero totale di rating presi in considerazione per determinare l’averageValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ratingCount</IRI>
+        <Literal xml:lang="en">rating count</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#region</IRI>
+        <Literal xml:lang="en">Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#returnPoint</IRI>
+        <Literal xml:lang="en">Return Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#returnPointDescription</IRI>
+        <Literal xml:lang="en">Return Point Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#route</IRI>
+        <Literal xml:lang="en">Class used to represent an ordered sequence of stages that can be followed by people and/or any type of transit vehicle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#route</IRI>
+        <Literal xml:lang="it">Classe  utilizzata per rappresentare una sequenza ordinata di tappe che possono essere seguite da persone e/o da qualsiasi tipo di veicolo di transito.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#route</IRI>
+        <Literal xml:lang="it">Itinerario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#route</IRI>
+        <Literal xml:lang="en">Itinerary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sauna</IRI>
+        <Literal xml:lang="it">questa proprietà indica la presenza di una sauna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sauna</IRI>
+        <Literal xml:lang="en">this property indicates the presence of a sauna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sauna</IRI>
+        <Literal xml:lang="en">sauna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sauna</IRI>
+        <Literal xml:lang="it">sauna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#shortDescription</IRI>
+        <Literal xml:lang="en">short description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stage</IRI>
+        <Literal xml:lang="en">Class used to represent a stage on a route, i.e. a stop during the journey or excursion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#stage</IRI>
+        <Literal xml:lang="it">Classe utilizzata per rappresentare una tappa di un percorso, ovvero una sosta durante il viaggio o escursione.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stage</IRI>
+        <Literal xml:lang="en">Stage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#stage</IRI>
+        <Literal xml:lang="it">Tappa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#typeOfExperience</IRI>
+        <Literal xml:lang="en">Property used to represent the specific type of experience. E.g.: Cooking course, tasting etc..;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#typeOfExperience</IRI>
+        <Literal xml:lang="it">Proprietà utilizzata per rappresentare la tipologia specifica di esperienza. Es: Corso Cucina, degustazione etc..;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#typeOfExperience</IRI>
+        <Literal xml:lang="it">tipologia di esperienza</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#typeOfExperience</IRI>
+        <Literal xml:lang="en">type of experience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wifi_access</IRI>
+        <Literal xml:lang="it">Questa proprietà rappresenta la possibilità di accedere al wifi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wifi_access</IRI>
+        <Literal xml:lang="en">this property represents the possibility of being able to access the wifi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wifi_access</IRI>
+        <Literal xml:lang="it">accesso al wifi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#wifi_access</IRI>
+        <Literal xml:lang="en">wifi access</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
